@@ -18,8 +18,19 @@
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f6e7ff;
     --white: #ffff;
-    --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
-    --bg-desktop: url(./assets/images/pattern-background-desktop-light.svg);
+    --bg-mobile-light: url(./assets/images/pattern-background-mobile-light.svg);
+    --bg-desktop-light: url(./assets/images/pattern-background-desktop-light.svg);
+    --bg-mobile-dark: url(./assets/images/pattern-background-mobile-dark.svg);
+    --bg-desktop-dark: url(./assets/images/pattern-background-desktop-dark.svg);
+}
+
+body.escuro {
+    --bg-color: #313e51; 
+    --primary-text-color: #f4f6fa;
+    --secondary-text-color: #a7b1c2;
+    --button-bg: #444c5a;
+    --bg-mobile: var(--bg-mobile-dark);
+    --bg-desktop: var(--bg-desktop-dark);
 }
 
 body {
@@ -31,13 +42,19 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background-image: var(--bg-mobile);
+        background-image: var(--bg-mobile-light);
+    }
+    body.escuro {
+        background-image: var(--bg-mobile-dark);
     }
 }
 
 @media (min-width: 769px) {
     body {
-        background-image: var(--bg-desktop);
+        background-image: var(--bg-desktop-light);
+    }
+    body.escuro {
+        background-image: var(--bg-desktop-dark);
     }
 }
 
@@ -139,76 +156,74 @@ main {
     background: var(--bg-css);
 }
 
-.botao_javascript {
+.botao_javascript div {
     background: var(--bg-javascript);
 }
 
-.botao_acessibilidade {
+.botao_acessibilidade div {
     background: var(--bg-acessibilidade);
 }
 
-@media(min-width:1100px ){
-    body{
-        background: var(--bg-desktop) var(--bg-color);
+@media(min-width: 1100px) {
+    body {
         background-size: cover;
         background-repeat: no-repeat;
     }
 
-    header{
+    header {
         margin-block: 81px;
     }
 
-    .tema{
+    .tema {
         gap: 16px;
     }
 
-    .tema img{
+    .tema img {
         width: 24px;
     }
 
-    .tema button{
+    .tema button {
         width: 48px;
         height: 28px;
     }
 
-    .tema button div{
+    .tema button div {
         width: 20px;
         height: 20px;
     }
 
-    main{
+    main {
         display: flex;
         max-width: 1160px;
         margin-inline: auto;
     }
 
-    section{
+    section {
         width: 100%;
     }
 
-    .boas_vindas h1{
+    .boas_vindas h1 {
         font-size: 64px;
         margin-bottom: 48px;
     }
 
-    .boas_vindas p{
+    .boas_vindas p {
         font-size: 20px;
     }
 
-    .assuntos{
+    .assuntos {
         gap: 24px;
     }
 
-    .assuntos button{
+    .assuntos button {
         font-size: 28px;
         padding: 20px;
         gap: 32px;
     }
 
-    .assuntos button div{
+    .assuntos button div {
         width: 56px;
         height: 56px;
         padding: 8px;
-        
     }
 }
