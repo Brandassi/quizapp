@@ -26,11 +26,12 @@
 
 body.escuro {
     --bg-color: #313e51; 
-    --primary-text-color: #f4f6fa;
-    --secondary-text-color: #a7b1c2;
-    --button-bg: #444c5a;
+    --button-bg: #3b4d66;
     --bg-mobile: var(--bg-mobile-dark);
     --bg-desktop: var(--bg-desktop-dark);
+    --primary-text-color: #fff;
+    --shadow: 0px 16px 40px 0px rgba(49,62,81,0.14);
+    --secondary-text-color: #abc1e1;
 }
 
 body {
