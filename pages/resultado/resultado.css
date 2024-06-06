@@ -1,229 +1,243 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Rubik", sans-serif;
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
-    --bg-color: #f4f6fa;
-    --bg-span: #f4f6fa;
-    --color-span: #626c7f;
-    --purple: #a729f5;
-    --purple-hover: rgba(167, 41, 245, 0.7);
-    --primary-text-color: #313e51;
-    --secondary-text-color: #626c7f;
-    --pontuacao-bg: #fff;
-    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
-    --bg-html: #fff1e9;
-    --bg-css: #e0feef;
-    --bg-javascript: #ebf0ff;
-    --bg-acessibilidade: #f6e7ff;
-    --white: #ffff;
-    --green: #26d782;
-    --red: #ee5454;
-    --bg-mobile-light: url(../../assets/images/pattern-background-mobile-light.svg);
-    --bg-desktop-light: url(../../assets/images/pattern-background-desktop-light.svg);
-    --bg-mobile-dark: url(../../assets/images/pattern-background-mobile-dark.svg);
-    --bg-desktop-dark: url(../../assets/images/pattern-background-desktop-dark.svg);
+  --bg-color: #f4f6fa;
+  --bg-span: #f4f6fa;
+  --color-span: #626c7f;
+  --purple: #a729f5;
+  --purple-hover: rgba(167, 41, 245, 0.7);
+  --primary-text-color: #313e51;
+  --secondary-text-color: #626c7f;
+  --pontuacao-bg: #fff;
+  --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+  --bg-html: #fff1e9;
+  --bg-css: #e0feef;
+  --bg-javascript: #ebf0ff;
+  --bg-acessibilidade: #f6e7ff;
+  --white: #ffff;
+  --green: #26d782;
+  --red: #ee5454;
+  --bg-mobile-light: url(../../assets/images/pattern-background-mobile-light.svg);
+  --bg-desktop-light: url(../../assets/images/pattern-background-desktop-light.svg);
+  --bg-mobile-dark: url(../../assets/images/pattern-background-mobile-dark.svg);
+  --bg-desktop-dark: url(../../assets/images/pattern-background-desktop-dark.svg);
 }
 
 body.escuro {
-    --bg-color: #313e51; 
-    --button-bg: #3b4d66;
-    --color-span:#313e51;
-    --bg-mobile-dark: url(../../assets/images/pattern-background-mobile-dark.svg);
-    --bg-desktop-dark: url(../../assets/images/pattern-background-desktop-dark.svg);
-    --primary-text-color: #fff;
-    --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
-    --secondary-text-color: #abc1e1;
+  --bg-color: #313e51;
+  --button-bg: #3b4d66;
+  --color-span: #313e51;
+  --bg-mobile-dark: url(../../assets/images/pattern-background-mobile-dark.svg);
+  --bg-desktop-dark: url(../../assets/images/pattern-background-desktop-dark.svg);
+  --primary-text-color: #fff;
+  --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
+  --secondary-text-color: #abc1e1;
 }
 
 body {
+  height: 100svh;
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--bg-mobile-light);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.assunto {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.assunto_icone {
+  background: var(--bg-acessibilidade);
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.assunto_icone img {
+  width: 100%;
+}
+
+.assunto h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.tema {
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tema img {
+  width: 16px;
+}
+
+.tema button {
+  height: 20px;
+  width: 32px;
+  background: var(--purple);
+  border: 0;
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.tema button div {
+  background: var(--white);
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+}
+
+main {
+  padding: 32px 24px;
+}
+
+main h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--primary-text-color);
+  margin-bottom: 40px;
+}
+
+main h2 strong {
+  font-weight: 500;
+}
+
+.pontuacao {
+  background: var(--pontuacao-bg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+}
+
+.pontuacao strong {
+  font-size: 88px;
+  color: var(--primary-text-color);
+  font-weight: 500;
+}
+
+.pontuacao p {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+}
+
+main button {
+  padding: 16px;
+  border-radius: 12px;
+  border: 0;
+  background: var(--purple);
+  color: var(--white);
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+main button:hover {
+  background: var(--purple-hover);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+@media (min-width: 1100px) {
+  body {
     height: 100svh;
     background-color: var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-image: var(--bg-mobile-light);
-}
+  }
 
-header{
+  header {
     display: flex;
     justify-content: space-between;
     padding: 16px 24px;
-}
+  }
 
-.assunto{
+  .assunto {
     display: flex;
     align-items: center;
     gap: 16px;
-}
+  }
 
-.assunto_icone{
+  .assunto_icone {
     background: var(--bg-acessibilidade);
     height: 40px;
     width: 40px;
     padding: 5px;
     border-radius: 5px;
-}
+  }
 
-.assunto_icone img{
+  .assunto_icone img {
     width: 100%;
-}
+  }
 
-.assunto h1{
+  .assunto h1 {
     font-size: 18px;
     font-weight: 500;
     color: var(--primary-text-color);
-}
+  }
 
-.tema {
+  .tema {
     padding: 8px 0px;
     display: flex;
     align-items: center;
     gap: 8px;
-}
+  }
 
-.tema img {
+  .tema img {
     width: 16px;
-}
+  }
 
-.tema button {
+  .tema button {
     height: 20px;
     width: 32px;
     background: var(--purple);
     border: 0;
     border-radius: 999px;
     padding: 4px;
-}
+  }
 
-.tema button div {
+  .tema button div {
     background: var(--white);
     width: 12px;
     height: 12px;
     border-radius: 999px;
-}
+  }
 
-main{
-    padding: 32px 24px;
-}
-
-main h2{
-    font-size: 40px;
-    font-weight: 300;
-    color: var(--primary-text-color);
-    margin-bottom: 40px;
-}
-
-main h2 strong{
-    font-weight: 500;
-}
-
-.pontuacao{
-    background: var(--pontuacao-bg);
-    padding: 32px;
+  main{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    border-radius: 12px;
+    gap: 140px;
+    max-width: 1160px;
+    margin-inline: auto;
+  }
 
-}
-
-.pontuacao strong{
-    font-size: 88px;
-    color: var(--primary-text-color);
-    font-weight: 500;
-}
-
-.pontuacao p{
-    color: var(--secondary-text-color);
-    font-size: 18px;
-}
-
-main button{
-    padding: 16px;
-    border-radius: 12px;
-    border: 0;
-    background: var(--purple);
-    color: var(--white);
+  main h2,
+  main>div{
     width: 100%;
-    font-size: 18px;
-    font-weight: 500;
-    transition: background 0.3s;
-}
+  }
 
-main button:hover{
-    background: var(--purple-hover);
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-@media(min-width: 1100px){
-    body {
-        height: 100svh;
-        background-color: var(--bg-color);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: var(--bg-mobile-light);
-    }
-    
-    header{
-        display: flex;
-        justify-content: space-between;
-        padding: 16px 24px;
-    }
-    
-    .assunto{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-    }
-    
-    .assunto_icone{
-        background: var(--bg-acessibilidade);
-        height: 40px;
-        width: 40px;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    
-    .assunto_icone img{
-        width: 100%;
-    }
-    
-    .assunto h1{
-        font-size: 18px;
-        font-weight: 500;
-        color: var(--primary-text-color);
-    }
-    
-    .tema {
-        padding: 8px 0px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .tema img {
-        width: 16px;
-    }
-    
-    .tema button {
-        height: 20px;
-        width: 32px;
-        background: var(--purple);
-        border: 0;
-        border-radius: 999px;
-        padding: 4px;
-    }
-    
-    .tema button div {
-        background: var(--white);
-        width: 12px;
-        height: 12px;
-        border-radius: 999px;
-    }
-    
+  main h2{
+    font-size: 64px;
+  }
 }
