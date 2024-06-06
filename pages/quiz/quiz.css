@@ -18,6 +18,8 @@
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f6e7ff;
     --white: #ffff;
+    --green: #26d782;
+    --red: #ee5454;
     --bg-mobile-light: url(../../assets/images/pattern-background-mobile-light.svg);
     --bg-desktop-light: url(../../assets/images/pattern-background-desktop-light.svg);
     --bg-mobile-dark: url(../../assets/images/pattern-background-mobile-dark.svg);
@@ -158,8 +160,13 @@ main{
 }
 
 .alternativas label:has(input:checked){
-    
-}
+    outline: 3px solid var(--purple);
+
+    & span {
+        background: var(--purple);
+        color: var(--white);
+    }
+} 
 
 .alternativas input {
     display: none;
