@@ -227,7 +227,7 @@ main button:hover {
     border-radius: 999px;
   }
 
-  main{
+  main {
     display: flex;
     gap: 140px;
     max-width: 1160px;
@@ -235,28 +235,28 @@ main button:hover {
   }
 
   main h2,
-  main>div{
+  main > div {
     width: 100%;
   }
 
-  main h2{
+  main h2 {
     font-size: 64px;
   }
 
-  .pontuacao{
+  .pontuacao {
     border-radius: 24px;
     margin-bottom: 32px;
   }
 
-  .pontuacao strong{
+  .pontuacao strong {
     font-size: 144px;
   }
 
-  .pontuacao p{
+  .pontuacao p {
     font-size: 24px;
   }
 
-  main button{
+  main button {
     font-size: 22px;
     padding: 24;
     border-radius: 24px;
